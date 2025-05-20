@@ -1,35 +1,59 @@
 'use client'
 
 import styles from './Currency-Converter.module.scss'
+import '../main-page/Currency-Converter.module.scss'
+
+//<span>
+//       Convert    </span>
+
 
 export default function CurrencyConverter() {
   return (
-    <div>
-      <h1>Convert</h1>
+      
+    <div className={styles.Container}>
+      <div>
+        {/* Input do valor */}
+        <div>
+          <label htmlFor="amount">
+              Valor
+          </label>
+        </div>
+        <div>
+          <input type="number" id="amount" placeholder="0,00" className={styles.Input}/>
+        </div>
 
-      <div>
-        <input type="number" placeholder="Valor" />
-      </div>
+        {/* Seletores de moeda */}
+        <div>
+          <div>
 
-      <div>
-        <select>
-          <option value="USD">Dólar</option>
-          <option value="EUR">Euro</option>
-          <option value="JPY">Iene</option>
-          <option value="BRL">Real</option>
-        </select>
-      </div>
+            <label>
+                De
+            </label>
 
-      <div>
-        <input type="number" placeholder="Valor" />
-      </div>
-      <div>
-        <select>
-          <option value="EUR">Euro</option>
-          <option value="USD">Dólar</option>
-          <option value="JPY">Iene</option>
-          <option value="BRL">Real</option>
-        </select>
+            <select defaultValue="USD">
+              <option value="USD">Dólar</option>
+              <option value="EUR">Euro</option>
+              <option value="JPY">Iene</option>
+              <option value="BRL">Real</option>
+              {/* Pode adicionar mais moedas */}
+            </select>
+
+            <label>
+                Para
+            </label>
+
+            <select defaultValue="BRL">
+              <option value="USD">Dólar</option>
+              <option value="EUR">Euro</option>
+              <option value="JPY">Iene</option>
+              <option value="BRL">Real</option>
+            </select>
+          </div>
+
+        </div>
+        <button className={styles.DivButton}>
+          Converter
+        </button>
       </div>
     </div>
   )

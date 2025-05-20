@@ -14,17 +14,24 @@
 
 /* Aplica Inter no corpo inteiro */
 body {
-  font-family: 'Inter', sans-serif;
-  background-image: url('/image/background.png'); // Caminho relativo à pasta "public"
-  background-size: cover; // Faz a imagem cobrir todo o fundo
-  background-position: center; // Centraliza a imagem
-  background-repeat: no-repeat; // Evita que a imagem fique repetindo
+  background-image: url('/image/background.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b0b1f;
 }
+
 html, body {
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
-.h1 {
-  color: aliceblue;
-}
+
+
