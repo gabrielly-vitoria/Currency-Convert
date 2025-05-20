@@ -1,8 +1,30 @@
-body {
-  background-image: url('/currency-converter/public/background.png');
-  background-size: cover; // cobre toda a tela
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
+@import 'fonts';
+
+/* Define as fontes padrão */
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Aplica Inter no corpo inteiro */
+body {
+  font-family: 'Inter', sans-serif;
+  background-image: url('/image/background.png'); // Caminho relativo à pasta "public"
+  background-size: cover; // Faz a imagem cobrir todo o fundo
+  background-position: center; // Centraliza a imagem
+  background-repeat: no-repeat; // Evita que a imagem fique repetindo
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.h1 {
+  color: aliceblue;
 }
