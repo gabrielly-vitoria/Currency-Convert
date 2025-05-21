@@ -2,7 +2,7 @@
 .Container {
     background-color: #141534;
     border: 1px solid #2F3279;
-    padding: 35px 64px ;
+    padding: 45px 60px ;
     border-radius: 16px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     display: flex;
@@ -29,18 +29,16 @@
   font-size: 9px;
   text-transform: uppercase;
   font-family: Inter;
-  font-weight: 400px;
-  font-family: Inter;
-  text-transform: uppercase;
   margin: 7px;
 
   color: #B2B8DE;
 }
 
+
 .Container input,
 .Container select {
   width: 100%;
-  padding: 9px 28px;
+  padding: 9px 50px;
   border-radius: 6px;
   border: none;
   font-size: 12px;
@@ -51,11 +49,29 @@
   border: 1px solid #1F2151;
   color: #B2B8DE;
 
+   & {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+
+      text-align: left !important;
+      padding-left: 20px !important; 
+      direction: ltr !important;
+   }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+    box-shadow: 0 0 0px 1000px #0E0F25 inset !important;
+    -webkit-text-fill-color: #B2B8DE !important;
+    transition: background-color 9999s ease-in-out 0s;
+}
 }
 
 .Container button {
   width: 100%;
-  padding: 0.75rem;
+  padding: 10px 30px;
   margin-top: 10px;
   border-radius: 6px;
   font-size: 12px;
@@ -63,10 +79,39 @@
   cursor: pointer;
   transition: background 0.3s ease;
 
-  background-color: #1e217d;
+  background-color: #3034a9;
   color: #B2B8DE;
+  box-shadow: 0px 5px 30px  #060713;
 }
 
 .Container button:hover {
-  background-color: #17227a;
+  background-color: #222e89;
+}
+
+.Container button:active {
+  background-color: #1e2376;
+  transform: scale(0.95); 
+}
+
+.Resultado {
+  margin-top: 20px;
+  background-color: #0A0B1E;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  color: #B2B8DE;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+
+  p {
+    font-size: 12px;
+    color: #7c82b0;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+  }
 }
