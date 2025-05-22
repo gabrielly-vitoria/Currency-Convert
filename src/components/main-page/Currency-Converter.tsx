@@ -20,9 +20,11 @@ export default function CurrencyConverter() {
   const [amount, setAmount] = useState('') // amount é o valor que o usuário vai digitar (ex: 5 ou 10,50)
   // setAmount é a função que atualiza esse valor
 
-  const [fromCurrency, setFromCurrency] = useState('USD') // fromCurrency é a moeda que o usuário quer converter, From = de (ex: dólar)
+  const [fromCurrency, setFromCurrency] = useState('USD') // fromCurrency é a moeda que o usuário quer converter, 
+  // From = de (ex: dólar), começa com USD
 
-  const [toCurrency, setToCurrency] = useState('BRL') // toCurrency é a moeda que o usuário quer converter, To = para (ex: real)
+  const [toCurrency, setToCurrency] = useState('BRL') // toCurrency é a moeda que o usuário quer converter, 
+  // To = para (ex: real). começa com BRL
 
   // exchangeRate guarda a taxa de câmbio (ex: 1 dólar = 5.42 reais)
   // | null quer dizer que pode ser um número ou nulo (quando ainda não carregou)
@@ -32,12 +34,13 @@ export default function CurrencyConverter() {
   const [convertedValue, setConvertedValue] = useState<number | null>(null) // e atualiza e armazena o valor ocnvertido 
 
   // Essa função busca a taxa de câmbio atual usando uma API chamada AwesomeAPI 
-  // async functions são uteis nesse tipo de situação pq elas permitem que o código continue rodando mesmo que ela n tenha sido chamada ainda 
+  // async functions são uteis nesse tipo de situação porque elas permitem que o código continue rodando mesmo que ela não
+  // tenha sido chamada ainda 
   async function fetchExchangeRate() {
     // A URL da API vai ser mudada dependendo das moedas escolhidas
     const url = `https://economia.awesomeapi.com.br/json/last/${fromCurrency}-${toCurrency}`
 
-    // Vai tentar executar o que está dentro desse ecopo
+    // try vai tentar executar o que está dentro desse ecopo
     try {
       // Aqui a gente faz a requisição usando axios para a URL
      const response = await axios.get(url)
@@ -52,7 +55,7 @@ export default function CurrencyConverter() {
       // Pegando o valor da cotação atual da moeda
       const rate = parseFloat(data[key].bid)
 
-      // E salva o valor da cotação atua da moeda na variável setExchangerRate
+      // E salva o valor da cotação atual da moeda na variável setExchangerRate
       setExchangeRate(rate)
 
       // e retorna esse valor para que chamou a função 
@@ -66,8 +69,6 @@ export default function CurrencyConverter() {
   }
 
   // Função que vai calcular o valor convertido quando o usuário clicar no botão Convert
-  // 
- // Função que vai ser chamada quando o usuário clicar no botão "Convert"
 // Essa função é async porque vamos usar "await" nela (para esperar a resposta da API)
 async function handleConvert() {
   // Aqui a gente transforma o valor digitado em número real
