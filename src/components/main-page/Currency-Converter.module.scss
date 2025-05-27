@@ -1,5 +1,7 @@
 
 .Container {
+    width: 35vw;
+    height: 70vh;
     background-color: #141534;
     border: 1px solid #2F3279;
     padding: 45px 60px ;
@@ -10,6 +12,12 @@
     align-items: flex-start;
     flex-direction: column;
     color: #B2B8DE;
+
+    & {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 }
 
 .Container div {
@@ -37,7 +45,8 @@
 
 .Container input,
 .Container select {
-  width: 100%;
+  width: 23vw;
+  height: 6vh;
   padding: 9px 50px;
   border-radius: 6px;
   border: none;
@@ -117,46 +126,149 @@
 }
 
 
-@media ( max-width: 1280px ) {
+
+@media ( max-width: 1240px ) {
   .Container {
-      transform: scale(1.1); // Aumenta tudo em 20%
-      transform-origin: center; // Faz o aumento acontecer a partir do centro
+      width: 40vw;
+      height: 70vh;
+      align-items: center;
+
+      & {
+        display: flex;
+        justify-content: center;
+      }
+  
+  input, select {
+        width: 25vw;
+        height: 7vh;
+        font-size: 15px;
+        margin: 3px;
+    }
   }
 }
 
-@media ( max-width: 884px ) {
+@media ( max-width: 885px ) {
   .Container {
-      transform: scale(1.4); // Aumenta tudo em 20%
-      transform-origin: center; // Faz o aumento acontecer a partir do centro
+    height: 60vh;
+    width: 60vw;
+
+    & {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    input, select {
+      width: 37vw;
+      height: 5.5vh;
+      font-size: 15px;
+      margin: 6px;
+    }
   }
 }
 
-@media (max-width: 565px) {
+@media ( max-width: 879px ) {
   .Container {
-    transform: scale(1.0); // Aumenta tudo em 20%
-    transform-origin: center; // Faz o aumento acontecer a partir do centro
+    height: 75vh;
+    width: 65vw;
+
+    & {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    input, select {
+      width: 40vw;
+      height: 7vh;
+      font-size: 15px;
+      margin: 6px;
+    }
   }
 }
 
-@media (max-width: 390px) {
+@media ( max-width: 844px ) {
   .Container {
-    transform: scale(0.99); // Aumenta tudo em 20%
-    transform-origin: center; // Faz o aumento acontecer a partir do centro
+    height: 70vh;
+    width: 60vw;
+    
+    input, select {
+      width: 37vw;
+      height: 6vh;
+      font-size: 15px;
+      margin: 6px;
+    }
   }
 }
 
-@media ( max-width: 360px ) {
+@media ( max-width: 810px ) {
   .Container {
-    transform: scale(0.9); // Aumenta tudo em 20%
-    transform-origin: center; // Faz o aumento acontecer a partir do centro
+    height: 49vh;
+    width: 70vw;
+
+    input, select {
+      width: 45vw;
+      height: 5vh;
+      font-size: 15px;
+      margin: 6px;
+    }
+  }
+}
+
+@media ( max-width: 840px ) {
+  .Container {
+    height: 55vh;
+    width: 70vw;
+
+    input, select {
+      width: 45vw;
+      height: 5.5vh;
+      font-size: 17px;
+      margin: 7px;
+    }
+  }
+}
+
+@media ( max-width: 432px ) {
+  .Container {
+    height: 68vh;
+    width: 90vw;
+
+    input, select {
+      width: 60vw;
+      height: 7vh;
+      margin: 5px;
+      font-size: 13px;
+    }
   }
 }
 
 
-@media ( max-width: 320px ) {
-  .Container {
-    transform: scale(0.9); // Aumenta tudo em 20%
-    transform-origin: center; // Faz o aumento acontecer a partir do centro
+@media (max-width: 395px) {
+   .Container {
+    height: 75vh;
+    width: 92vw;
+
+    input, select {
+      width: 60vw;
+      height: 6.6vh;
+      margin: 5px;
+      font-size: 13px;
+    }
   }
 }
+
+@media ( max-width: 325px ) {
+  .Container {
+    height: 95vh;
+    width: 95vw;
+
+    input, select {
+      width: 64vw;
+      height: 8vh;
+    }
+  }
+}
+
+
 
