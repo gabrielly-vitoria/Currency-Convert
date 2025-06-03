@@ -1,4 +1,4 @@
-@import 'fonts';
+@use 'fonts';
 
 /* Define as fontes padrão */
 :root {
@@ -14,7 +14,7 @@
 
 /* Aplica Inter no corpo inteiro */
 body {
-  background-image: url('/image/background.png'); 
+  background-image: url('/../../public/image/background.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
