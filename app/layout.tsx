@@ -1,4 +1,4 @@
-import '../src/styles/global.scss';
+import '../src/styles/global.scss'
 import CurrencyConverter from '@/src/components/main-page/Currency-Converter'
 import '../src/components/main-page/Currency-Converter.module.scss'
 

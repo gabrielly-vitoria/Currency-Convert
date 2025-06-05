@@ -33,6 +33,8 @@ export default function CurrencyConverter() {
   // convertedValue guarda o resultado final da conversão
   const [convertedValue, setConvertedValue] = useState<number | null>(null) // e atualiza e armazena o valor ocnvertido 
 
+  const [showResult, setShowResult] = useState(false)
+
   // Essa função busca a taxa de câmbio atual usando uma API chamada AwesomeAPI 
   // async functions são uteis nesse tipo de situação porque elas permitem que o código continue rodando mesmo que ela não
   // tenha sido chamada ainda 
@@ -92,6 +94,9 @@ async function handleConvert() {
       // Depois a gente guarda esse resultado no estado "convertedValue"
       // Isso vai fazer a tela atualizar com o valor convertido
       setConvertedValue(result)
+
+      setShowResult(true)
+
     }
   }
 }
@@ -168,7 +173,8 @@ return (
       {/*Se o valor contido dentro das Variáveis convertedValue e exchangeRate não for igual a null então será exutado oque
       estiver dentro do escopo*/}
       {convertedValue !== null && exchangeRate !== null && (
-        <div className={styles.Resultado}>
+        <div className={`${styles.VisibleResult} ${showResult ? styles.ResultadoVisivel : ''}`}>
+
           <p>
             {/* Esse "1 {dromCurency}" vai mostrar a moeda de origem, por exemplo se você escolheu "USD", vai aparecer 1 USD  */}
             {/* Já .toFixed(2) arredonda o número para ter 2 casas decimais. Exemplo: se a taxa for 5.123456, 
